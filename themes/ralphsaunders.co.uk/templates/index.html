@@ -1,6 +1,19 @@
-Output file: {{output_file}}
 {% extends 'master.html' %}
 
-{% block title %}
-Index page! :D
+{% block title %}Index page! :D{% endblock %}
+
+{% block body %}
+    Output file: {{output_file}}
+    <pre>{{articles}}</pre>
+
+    {% for article in articles %}
+    <h1><a href="{{article.url}}">{{article.title}}</a></h1>
+    {{article.date}}
+    {{article.category}}
+    {{article.slug}}
+    {{article.author}}
+    {{article.summary}}
+    {{article.content}}
+    {% endfor %}
+
 {% endblock %}

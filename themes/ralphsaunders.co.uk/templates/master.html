@@ -4,7 +4,26 @@
         {% block head %}
         <title>{% block title %}{% endblock %}</title>
         {% endblock %}
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/normalize.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/styles.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/responsive.css" />
+
+        <!-- Javascript -->
+        <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/scripts.js"></script>
+
+        <!-- Typekit -->
+        <script type="text/javascript" src="//use.typekit.net/umd0yin.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
+        <nav class="hero-navigation">
+            <ul class="wrapper">
+                <li><a href="{{SITEURL}}" title="Take me home!">Home</a></li>
+            </ul>
+        </nav>
+        {% block body %}
+        {% endblock %}
     </body>
 </html>

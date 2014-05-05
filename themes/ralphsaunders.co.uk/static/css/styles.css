@@ -1,0 +1,191 @@
+/*************************************************************
+ * Typography
+ ************************************************************/
+body {
+    font:16px/1.6 "ars-maquette-web", Helvetica, Arial, Sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin:.5em 0;
+}
+
+
+p {
+    margin:0 0 1em 0;
+}
+
+a {
+    color:#302e2b;
+    background:#fcd70b;
+    display:inline-block;
+    padding:2px 5px;
+}
+
+a:hover {
+    text-decoration:none;
+    background:#fce356;
+}
+
+/*************************************************************
+ * Generic classes and rules
+ ************************************************************/
+* {
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.wrapper {
+    width:55%;
+    margin:0 auto;
+}
+
+/*************************************************************
+ * Hero Navigation (Appears at the top of every page)
+ ************************************************************/
+.hero-navigation {
+    background:#e6e6e6;
+    overflow:hidden;
+}
+.hero-navigation ul {
+    list-style:none;
+}
+.hero-navigation li {
+    float:right;
+}
+.hero-navigation a {
+    padding:20px 25px;
+    display:block;
+    color:#302e2b;
+    text-decoration:none;
+    background:#c9c5c5;
+}
+.hero-navigation a:hover {
+    background:#b4b0b0;
+}
+
+/*************************************************************
+ * Article - General Gubbins
+ ************************************************************/
+.article {
+    width:100%;
+    margin:0 auto;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6,
+.article p,
+.article ul,
+.article ol {
+    width:55%;
+    margin-right:12.5%;
+    padding:0;
+    float:right;
+    clear:both;
+}
+
+/*************************************************************
+ * Article - List Treatments
+ ************************************************************/
+.article ul,
+.article ol {
+    list-style-position:outside;
+    padding-left:0;
+}
+
+/*************************************************************
+ * Article - Code Blocks
+ ************************************************************/
+.article .highlight {
+    width:55%;
+    margin:0 12.5% 1em 0;
+    clear:both;
+    float:right;
+    background:#302e2b;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:3px;
+    transition:all .75s;
+}
+.article .highlight:hover {
+    width:100%;
+    border-radius:0;
+    margin:0 0 1em 0;
+}
+
+/*************************************************************
+ * Article - Summary Block
+ ************************************************************/
+.article .title {
+    font-size:7em;
+    font-weight:200;
+    font-style:italic;
+    text-transform:uppercase;
+    line-height:1.2;
+    float:right;
+    border-bottom:10px solid #fcd70b;
+    width:75%;
+    margin:0 12.5% 20px 0;
+    padding-bottom:0.089em;
+}
+
+.article .summary {
+    font-size:1.125em;
+    font-weight:500;
+}
+
+/*************************************************************
+ * Article - Quotes
+ ************************************************************/
+.article blockquote {
+    margin:0;
+    border-left:4px solid #fcd70b;
+    clear:both;
+    float:right;
+    padding-left:20px;
+    width:55%;
+    margin-right:12.5%;
+}
+.article blockquote > * {
+    margin:0;
+    float:none;
+    clear:both;
+    width:auto;
+}
+
+
+/*************************************************************
+ * Article - Full Width Elements
+ ************************************************************/
+.article .full-width {
+    margin:0 0 1em 0;
+    padding:0;
+    position:relative;
+    overflow:hidden;
+    clear:both;
+}
+
+.article .full-width figcaption {
+    background:#fce356;
+    position:absolute;
+    right:7%;
+    bottom:10%;
+    padding:15px;
+    max-width:250px;
+    color:#302e2b;
+    font-size:0.875em;
+    line-height:1.8;
+}
+
+.article .full-width iframe {
+    display:block;
+    float:right;
+    margin:0 12.5% 0 0;
+}
