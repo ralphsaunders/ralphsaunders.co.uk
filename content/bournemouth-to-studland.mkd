@@ -1,8 +1,62 @@
-Title: Bournemouth To Studland!
+Title: How to make snake in HTML5 canvas
 Date: 2014-02-13
 Category: adventure
 Slug: bournemouth-to-studland
 Author: Ralph Saunders
-Summary: To studland!
+Summary: Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
 
-# My awesome post :3
+## Sub title
+
+> Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+
+- Efficiently unleash cross-media information without cross-media value.
+- Quickly maximize timely deliverables for real-time schemas.
+- Dramatically maintain clicks-and-mortar solutions without functional.
+
+```python
+from api import app, rs_api
+from flask.ext.restful import Resource
+import twitter
+
+class Index(Resource):
+    def get(self):
+        return 'abc'
+
+rs_api.add_resource(Index, '/')
+```
+
+Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+
+1. Completely synergize resource sucking relationships via premier niche.
+2. Professionally cultivate one-to-one customer service with robust ideas.
+3. Dynamically innovate resource-leveling customer service for state of.
+
+Objectively [innovate](http://example.com) empowered manufactured products
+whereas parallel platforms. __Holisticly__ _predominate_ extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
+
+<figure name="RawHtml" class="full-width">
+    <img src="http://placehold.it/1150x400" alt="Placeholder image" />
+    <figcaption>On December 25, 2000, tens of thousands of Snickers and Mars Bars were removed from New South Wales store shelves due to a series of threatening letters which resulted in fears that the chocolate bars had been poisoned.</figcaption>
+</figure>
+
+Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.
+
+Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+
+## Snickers History
+
+In 1930[5] Mars introduced Snickers, named after the favorite horse of the Mars family.[6] The Snickers candy bar consists of nougat, peanuts, and caramel with a chocolate coating. The bar was marketed under the name "Marathon" in the UK and Ireland until July 19, 1990, when Mars decided to align the UK product with the global Snickers name (Mars had marketed and discontinued an unrelated bar named Marathon in the United States during the 1970s). There are also several other Snickers products such as Snickers mini, dark chocolate, ice cream bars, Snickers with almonds, and Snickers peanut butter bars.[7]
+
+### Snickers Duo
+
+A replacement for the king size Snickers bar was launched in the UK in 2004 and designed to conform to the September 2004 Food and Drink Federation (FDF) "Manifesto for Food and Health". Part of the FDF manifesto was seven pledges of action to encourage the food and drink industry to be more health conscious.[8] Reducing portion size, clearer food labels, and reduction of the levels of fat, sugar, and salt were among the FDF pledges. Mars Incorporated pledged to phase out their king-size bars in 2005 and replace them with shareable bars. A Mars spokesman said: "Our king-size bars that come in one portion will be changed so they are shareable or can be consumed on more than one occasion. The name king-size will be phased out."[8]
+
+These were eventually replaced by the 'Duo', a double bar pack. Though this change to Duos reduced the weight from 3.5 to 3.29 ounces (99 to 93 g), the price remained the same. The packaging has step-by-step picture instructions of how to open a Duo into two bars, in four simple actions.[9] As Mars stated fulfillment of their promise, the Duo format was met with criticism by the National Obesity Forum and National Consumer Council.[10]
+
+<figure name="RawHtml" class="full-width">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m29!1m12!1m3!1d40397.780933436115!2d-1.8730112314458938!3d50.74106117641294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m14!1i0!3e1!4m5!1s0x4873a188c97c4dcb%3A0x94ab91f16aa58ef6!2sBournemouth+University%2C+Talbot+Campus%2C+Fern+Barrow%2C+Bournemouth%2C+Poole%2C+Dorset+BH12+5BB%2C+United+Kingdom!3m2!1d50.743294!2d-1.897158!4m5!1s0x48739852a2137741%3A0x7537818f47e6aad9!2sChristchurch%2C+Dorset%2C+UK!3m2!1d50.735777!2d-1.778586!5e0!3m2!1sen!2suk!4v1399249090144" width="900" height="600" frameborder="0" style="border:0"></iframe>
+</figure>
+
+### Australian recall
+
+On December 25, 2000, tens of thousands of Snickers and Mars Bars were removed from New South Wales store shelves due to a series of threatening letters which resulted in fears that the chocolate bars had been poisoned.[11] Mars received letters from an unidentified individual indicating that they planned to plant poisoned chocolate bars on store shelves.[11] The last letter sent included a Snickers bar contaminated with a substance which was later identified as rat poison.[11] The letters claimed that there were seven additional chocolate bars which had been tampered with and which were for sale to the public.[11] As a precautionary measure, Mars issued a massive recall.[11] Mars said that there had been no demand for money and complaints directed to an unidentified third party.[11]
