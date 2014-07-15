@@ -42,10 +42,12 @@ a:hover {
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
+
 .wrapper {
     width:55%;
     margin:0 auto;
 }
+
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -362,3 +364,9 @@ a:hover {
     padding:1em 0;
 }
 
+/*************************************************************
+ * Fast-track styles
+ ************************************************************/
+.log {
+    margin:2.5% 0 0 5%;
+}

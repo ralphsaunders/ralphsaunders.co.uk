@@ -1,31 +1,51 @@
-{% extends 'master.html' %}
+<!doctype html>
+<html>
+    <head lang="en-us">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block page_type %}index{% endblock %}
-{% block title %}Index page! :D{% endblock %}
+        {% if article and article.author %}
+        <meta name="author" content="{{ article.author }}" />
+        <meta name="copyright" content="{{ article.author }}" />
+        {% elif page and page.author %}
+        <meta name="author" content="{{ page.author }}" />
+        <meta name="copyright" content="{{ page.author }}" />
+        {% else %}
+        <meta name="author" content="{{ AUTHOR }}" />
+        <meta name="copyright" content="{{ AUTHOR }}" />
+        {% endif %}
 
+        <title>{{SITENAME}}</title>
+        {% include '_includes/feeds.html' %}
 
-{% block body %}
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/normalize.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/styles.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/responsive.css" />
 
-    <ol class="article-listing cf">
-        {% for article in articles_page.object_list %}
-            {% if loop.index == 1 %}
-                <li class="featured-article-wrap">
-                    <div class="featured-article">
-                        <h2 class="article-title"><a href="{{article.url}}">{{article.title}}</a></h2>
-                        <time>{{article.date}}</time>
-                        {{article.summary}}
-                    </div>
-                </li>
-            {% else %}
-                <li class="article">
-                    <h2 class="article-title"><a href="{{article.url}}">{{article.title}}</a></h2>
-                    <time>{{article.date}}</time>
-                    {{article.summary}}
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ol>
+        <!-- Javascript -->
+        <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/scripts.js"></script>
+        <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/main.js"></script>
 
-    {% include '_includes/pagination.html' %}
+        <!-- Typekit -->
+        <script type="text/javascript" src="//use.typekit.net/umd0yin.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-{% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>ralphsaunders.co.uk</h1>
+            <p>Yeah, so this is my blog and stuff</p>
+            <ol>
+                {% for article in articles_page.object_list %}
+                <li><a href="{{article.url}}">{{article.title}}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+
+        <pre class="log">
+
+        </pre>
+    </body>
+</html>
