@@ -5,6 +5,43 @@
     max-width:820px;
 }
 
+/*************************************************************
+ * Hero Navigation (Appears at the top of every page)
+@media screen and (min-width:1150px) {
+    .hero-navigation ul {
+        max-width:800px;
+    }
+}
+@media screen and (max-width:970px) {
+    .hero-navigation ul {
+        margin-right:0;
+    }
+}
+@media screen and (max-width:768px) {
+    .hero-navigation ul {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+    }
+}
+ ************************************************************/
+@media screen and (max-width:640px) {
+    .hero-navigation {
+        background:none;
+        margin-bottom:2em;
+    }
+
+    .hero-navigation .hero-nav-wrap {
+        border-bottom:3px solid #302e2b;
+        margin:0 auto;
+    }
+
+    .hero-navigation .logo-wrap {
+        float:none;
+        text-align:center;
+    }
+}
 
 /*************************************************************
  * Article - General Elements

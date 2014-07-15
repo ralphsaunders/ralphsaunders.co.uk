@@ -1,19 +1,31 @@
 {% extends 'master.html' %}
 
+{% block page_type %}index{% endblock %}
 {% block title %}Index page! :D{% endblock %}
 
-{% block body %}
-    Output file: {{output_file}}
-    <pre>{{articles}}</pre>
 
-    {% for article in articles %}
-    <h1><a href="{{article.url}}">{{article.title}}</a></h1>
-    {{article.date}}
-    {{article.category}}
-    {{article.slug}}
-    {{article.author}}
-    {{article.summary}}
-    {{article.content}}
-    {% endfor %}
+{% block body %}
+
+    <ol class="article-listing cf">
+        {% for article in articles_page.object_list %}
+            {% if loop.index == 1 %}
+                <li class="featured-article-wrap">
+                    <div class="featured-article">
+                        <h2 class="article-title"><a href="{{article.url}}">{{article.title}}</a></h2>
+                        <time>{{article.date}}</time>
+                        {{article.summary}}
+                    </div>
+                </li>
+            {% else %}
+                <li class="article">
+                    <h2 class="article-title"><a href="{{article.url}}">{{article.title}}</a></h2>
+                    <time>{{article.date}}</time>
+                    {{article.summary}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    {% include '_includes/pagination.html' %}
 
 {% endblock %}

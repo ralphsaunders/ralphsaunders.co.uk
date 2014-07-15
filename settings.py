@@ -12,11 +12,15 @@ RELATIVE_URLS = True
 GITHUB_URL = 'http://github.com/ralphsaunders/'
 REVERSE_CATEGORY_ORDER = True
 LOCALE = "C"
-DEFAULT_PAGINATION = 4
+DEFAULT_PAGINATION = 20
 DEFAULT_DATE = (2012, 3, 2, 14, 1, 1)
 
 FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
+
+# Archives
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
 
 LINKS = (('Biologeek', 'http://biologeek.org'),
          ('Filyb', "http://filyb.info/"),

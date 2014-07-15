@@ -1,7 +1,7 @@
-Title: Another Article
+Title: AGAIN!
 Date: 2014-02-13
-Category: design
-Slug: article-two
+Category: adventure
+Slug: twangy-twang
 Author: Ralph Saunders
 Summary: Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
 
