@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block title %}{{article.title}}{% endblock %}
+
+{% block body %}
+<article class="article">
+    <header>
+        <h1 class="title">{{article.title}}</h1>
+
+        <div class="summary">
+            {{article.summary}}
+        </div>
+    </header>
+
+    {{article.content}}
+</article>
+{% endblock %}

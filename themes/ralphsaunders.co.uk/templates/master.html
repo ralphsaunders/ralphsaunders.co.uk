@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        {% block head %}
+        <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/normalize.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/styles.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/responsive.css" />
+
+        <!-- Javascript -->
+        <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/scripts.js"></script>
+
+        <!-- Typekit -->
+        <script type="text/javascript" src="//use.typekit.net/umd0yin.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body class="{% block page_type %}{% endblock %}">
+
+        <noscript>
+            <div class="javascript-disabled">
+                <div class="wrapper">
+                    <h2>Hey, we noticed you have javascript disabled in your
+                        browser.</h2>
+                    <p>Enable javascript in your browser to fully experience this
+                    website. <a href="http://enable-javascript.com/"
+                        target="_blank">Here are some handy instructions!</a></p>
+                </div>
+            </div>
+        </noscript>
+
+        {% include '_includes/hero-navigation.html' %}
+
+        {% block body %}
+        {% endblock %}
+
+        {% include '_includes/hero-footer.html' %}
+
+    </body>
+</html>

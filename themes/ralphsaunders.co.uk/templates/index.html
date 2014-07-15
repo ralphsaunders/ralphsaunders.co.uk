@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head lang="en-us">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% if article and article.author %}
+        <meta name="author" content="{{ article.author }}" />
+        <meta name="copyright" content="{{ article.author }}" />
+        {% elif page and page.author %}
+        <meta name="author" content="{{ page.author }}" />
+        <meta name="copyright" content="{{ page.author }}" />
+        {% else %}
+        <meta name="author" content="{{ AUTHOR }}" />
+        <meta name="copyright" content="{{ AUTHOR }}" />
+        {% endif %}
+
+        <title>{{SITENAME}}</title>
+        {% include '_includes/feeds.html' %}
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/normalize.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/styles.css" />
+        <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/responsive.css" />
+
+        <!-- Javascript -->
+        <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/scripts.js"></script>
+        <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/main.js"></script>
+
+        <!-- Typekit -->
+        <script type="text/javascript" src="//use.typekit.net/umd0yin.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>ralphsaunders.co.uk</h1>
+            <p>Yeah, so this is my blog and stuff</p>
+            <ol>
+                {% for article in articles_page.object_list %}
+                <li><a href="{{article.url}}">{{article.title}}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+
+        <pre class="log">
+
+        </pre>
+    </body>
+</html>
