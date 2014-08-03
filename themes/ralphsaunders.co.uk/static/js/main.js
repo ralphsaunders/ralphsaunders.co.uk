@@ -8,7 +8,7 @@ var ajaxReq = function(url, callback) {
 };
 
 window.onload = function() {
-    ajaxReq('./data/log.txt', function(response) {
+    ajaxReq('../theme/data/log.txt', function(response) {
         document.getElementsByClassName('log')[0].innerHTML = response;
     });
 }
