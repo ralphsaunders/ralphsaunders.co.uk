@@ -229,3 +229,4 @@ __compiled.css:__
       color: #fff;
     }
 
+That's it&hellip; CSS sprites without the hassle.
