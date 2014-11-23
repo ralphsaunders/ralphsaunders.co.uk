@@ -38,7 +38,7 @@ There's this node package called [css-sprite](https://www.npmjs.org/package/css-
 
 So I've got this directory of Christmas icons because I have no taste or self-restraint when it comes to festive activities... here's what it looks like:
 
-![Source images](src-images.png)
+![Source images](./images/src-images.png)
 
 I ran css-sprite with these configuration options (I'm using gulp as my task runner):
 
@@ -63,7 +63,7 @@ Those config options say we want to create an image with the name `_sprites`, a 
 
 Here's the generated output:
 
-![Build Images + .styl file](build.png)
+![Build Images + .styl file](./images/build.png)
 
 And the contents of that `_sprites.styl` file that's ready to be compiled by stylus at a later time:
 
