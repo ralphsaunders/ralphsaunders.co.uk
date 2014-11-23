@@ -243,6 +243,7 @@ a:hover {
     padding-left:20px;
     width:55%;
     margin-right:12.5%;
+    margin-bottom:20px;
     position:relative;
 }
 .article blockquote:before {
@@ -261,6 +262,28 @@ a:hover {
     clear:both;
     width:auto;
 }
+
+.article blockquote ul {
+    list-style:none;
+}
+
+.article blockquote li {
+    margin-bottom:5px;
+    padding:3px 10px;
+    font-size:14px;
+}
+
+.article blockquote li:nth-child(odd) {
+    background:#EBEBEB;
+}
+
+.article blockquote li > * {
+    width:100%;
+    margin:0;
+    float:none;
+}
+
+
 
 
 /*************************************************************
