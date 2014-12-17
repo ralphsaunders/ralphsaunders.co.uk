@@ -21,6 +21,7 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 # static paths will be copied without parsing their contents
 STATIC_PATHS = [
         'images/',
+        'videos/',
         ]
 
 # Archives

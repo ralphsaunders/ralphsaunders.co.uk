@@ -4,11 +4,15 @@ var stylus = require('gulp-stylus');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('css', function() {
-    gulp.src('./static/css/src/*.styl')
+    return gulp.src('./static/css/src/*.styl')
         .pipe(stylus({
             compress: true
         }))
         .pipe(gulp.dest('./static/css/build/'))
+});
+
+gulp.task('css-regen', function() {
+    gulp.watch('./static/css/src/**/*.styl', ['css'])
 });
 
 gulp.task('images', function() {
