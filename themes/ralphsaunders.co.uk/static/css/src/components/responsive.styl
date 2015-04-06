@@ -5,26 +5,20 @@
     max-width:820px;
 }
 
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width 90%
+    }
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        font-size 14px
+    }
+}
+
 /*************************************************************
  * Hero Navigation (Appears at the top of every page)
-@media screen and (min-width:1150px) {
-    .hero-navigation ul {
-        max-width:800px;
-    }
-}
-@media screen and (max-width:970px) {
-    .hero-navigation ul {
-        margin-right:0;
-    }
-}
-@media screen and (max-width:768px) {
-    .hero-navigation ul {
-        width:80%;
-        margin-left:auto;
-        margin-right:auto;
-        float:none;
-    }
-}
  ************************************************************/
 @media screen and (max-width:640px) {
     .hero-navigation {
@@ -88,9 +82,10 @@
     }
 
     .article .highlight {
-        width:80%;
+        width 100%
         margin:0 auto 1em auto;
         float:none;
+        border-radius 0
     }
     .article .highlight:hover {
         margin:0 auto 1em auto;
@@ -100,6 +95,16 @@
         width:100%;
     }
 }
+
+/*************************************************************
+ * Article - Code Blocks
+ ************************************************************/
+@media screen and (max-width: 420px) {
+    .article .highlight {
+        font-size .750em
+    }
+}
+
 
 /*************************************************************
  * Article - h1

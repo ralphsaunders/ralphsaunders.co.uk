@@ -36,11 +36,12 @@
     </head>
     <body>
         <div class="wrapper">
-            <h1>ralphsaunders.co.uk</h1>
+            <h1 class="sitename">ralphsaunders.co.uk</h1>
             <p>Yeah, so this is my blog and stuff</p>
-            <ol>
+
+            <ol class="article-list">
                 {% for article in articles_page.object_list %}
-                <li><a href="{{article.url}}">{{article.title}}</a></li>
+                <li class="article-list-item"><a href="{{article.url}}">{{article.title}}</a></li>
                 {% endfor %}
             </ol>
         </div>

@@ -1,6 +1,6 @@
 Title: Frosted Glass With filter:blur()
 Date: 2014-12-17 13:05
-Modified: 2014-12-17 13:05
+Modified: 2014-12-17 16:23
 Category: FED
 Tags: CSS
 Slug: frosted-glass-with-filter-blur
@@ -70,6 +70,8 @@ obtaining something like a frosted glass effect.
         height: 0;
         overflow:hidden;
         margin-bottom:20px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 
     .sandbox video {
@@ -88,12 +90,14 @@ obtaining something like a frosted glass effect.
     }
 
     .blurred {
+        -moz-filter: blur(20px);
         -webkit-filter: blur(20px);
         filter: blur(20px);
         z-index: -2;
     }
 
     .sharp {
+        -moz-clip-path: polygon(0 0, 0 100%, 40% 100%, 40% 0, 80% 0, 80% 100%, 100% 100%, 100% 0);
         -webkit-clip-path: polygon(0 0, 0 100%, 40% 100%, 40% 0, 80% 0, 80% 100%, 100% 100%, 100% 0);
         clip-path: polygon(0 0, 0 100%, 40% 100%, 40% 0, 80% 0, 80% 100%, 100% 100%, 100% 0);
     }
@@ -115,6 +119,8 @@ obtaining something like a frosted glass effect.
     }
 
     .sandbox.transform {
+        -moz-perspective: 1500px;
+        -moz-transform: scale(.5);
         -webkit-perspective: 1500px;
         -webkit-transform: scale(.5);
         perspective: 1500px;
@@ -123,14 +129,17 @@ obtaining something like a frosted glass effect.
     }
 
     .sandbox.transform .demo-video {
+        -moz-transform: rotateY(40deg);
         -webkit-transform: rotateY(40deg);
     }
 
     .sandbox.transform .sharp {
+        -moz-transform: rotateY(40deg) translate(10%, 10%);
         -webkit-transform: rotateY(40deg) translate(10%, 10%);
     }
 
     .sandbox.transform .blurred-position {
+        -moz-transform: rotateY(40deg) translate(30%, 30%);
         -webkit-transform: rotateY(40deg) translate(30%, 30%);
     }
 
@@ -242,3 +251,28 @@ Here's some code for you to try:
             clip-path: polygon(0 0, 0 100%, 40% 100%, 40% 0, 80% 0, 80% 100%, 100% 100%, 100% 0);
         }
     </style>
+
+<script type="text/javascript">
+    // Start videos at the same time
+    var videosLoaded = 0;
+
+    var videos = [].map.call(document.querySelectorAll('video'), function(video) {
+        video.pause();
+        video.currentTime = 0;
+        video.addEventListener('loadeddata', function() {
+            videoLoaded();
+        }, false)
+
+        return video;
+    })
+
+    function videoLoaded() {
+        videosLoaded ++;
+
+        if(videosLoaded === videos.length) {
+            videos.map(function(video) {
+                video.play();
+            })
+        }
+    }
+</script>
