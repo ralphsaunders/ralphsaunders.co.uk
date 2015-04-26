@@ -9,7 +9,7 @@ Summary: **Perhaps dead is a little hyperbolic, but ‘withering’, ‘on its l
 
 Over the past twelve months it seems there’s been a surge in the usage of javascript frameworks. Everyone and their mother seems to be rolling out one of the many choices in their web builds. Whether it’s [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), or [Ember.js](http://emberjs.com/); every front-end developer seems to be hot under the collar about feature X in framework Y. 
 
-And why wouldn’t they be? Frameworks are a wonderful paradise of structured code, proven abstractions, and community support. No longer will the front-end developer have to trawl through some imposters jQuery DOM-bound spaghetti searching for that illusive function that sets the entire page in motion  &mdash; yes page, not component.
+And why wouldn’t they be? Frameworks are a wonderful paradise of structured code, proven abstractions, and community support. No longer will the front-end developer have to trawl through some imposter’s jQuery DOM-bound spaghetti searching for that illusive function that sets the entire page in motion  &mdash; yes page, not component.
 
 Or so I thought.
 
