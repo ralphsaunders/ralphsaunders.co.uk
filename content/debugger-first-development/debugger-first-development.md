@@ -25,14 +25,14 @@ Now it looks more like this:
  Despite this, I still see  developers writing things like
 `console.log(i + ‘ items’)`, and
 `console.log($(‘.some-element’).outerHeight())` &mdash; seemingly unaware of
-the wonderous tools that come installed with the browsers they use every day.
+the wondrous tools that come installed with the browsers they use every day.
 
 Could you be using web inspector better?
 
 If you find yourself doing any of these, it’s likely you could be using web
 inspect better:
 
-- `console.log()`ing variables ad-nauseum.
+- `console.log()`ing variables ad nauseam.
 - Guessing at variable and function names.
 - Making lots of small code changes resulting in back and forth between browser
   and code until it’s right.
