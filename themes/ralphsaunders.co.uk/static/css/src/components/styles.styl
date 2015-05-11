@@ -308,6 +308,10 @@ a:hover {
     position:relative;
     overflow:hidden;
     clear:both;
+
+    img {
+        max-width 100%
+    }
 }
 
 .article .full-width figcaption {
@@ -327,6 +331,18 @@ a:hover {
     float:right;
     margin:0 12.5% 0 0;
 }
+
+/*************************************************************
+ * Article - Full Width Elements Responsive
+ ************************************************************/
+@media screen and (max-width: 768px) {
+    .article .full-width figcaption {
+        position static
+        max-width 100%
+        margin-bottom 20px
+    }
+}
+
 
 /*************************************************************
  * Article Listing

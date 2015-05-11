@@ -9,3 +9,7 @@ gulp.task('images', function() {
         }))
         .pipe(gulp.dest('./content/images/dist/'))
 });
+
+gulp.task('write', function() {
+    return gulp.watch('./content/images/src/**/*', ['images']);
+});

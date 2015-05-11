@@ -1,19 +1,19 @@
 Title: jQuery is dead
-Date: 2015-05-26 14:56
-Modified: 2015-05-26 14:57
+Date: 2015-04-26 14:56
+Modified: 2015-04-26 14:57
 Category: FED
 Tags: javascript
 Slug: jquery-is-dead
 Authors: Ralph Saunders
 Summary: **Perhaps dead is a little hyperbolic, but ‘withering’, ‘on its last legs’, or simply ‘looking a bit rubbish now days’ wouldn’t have been as attention grabbing as I think this topic deserves.**
 
-Over the past twelve months it seems there’s been a surge in the usage of javascript frameworks. Everyone and their mother seems to be rolling out one of the many choices in their web builds. Whether it’s [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), or [Ember.js](http://emberjs.com/); every front-end developer seems to be hot under the collar about feature X in framework Y. 
+Over the past twelve months it seems there’s been a surge in the usage of javascript frameworks. Everyone and their mother seems to be rolling out one of the many choices in their web builds. Whether it’s [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), or [Ember.js](http://emberjs.com/); every front-end developer seems to be hot under the collar about feature X in framework Y.
 
 And why wouldn’t they be? Frameworks are a wonderful paradise of structured code, proven abstractions, and community support. No longer will the front-end developer have to trawl through some imposter’s jQuery DOM-bound spaghetti searching for that illusive function that sets the entire page in motion  &mdash; yes page, not component.
 
 Or so I thought.
 
-Then I picked through an implementation of a multi-faceted search written by an Angular newbie and begrudgingly noted that bad code can happen anywhere. It seems that in actuality, tools that require more upfront knowledge do more harm than good in the hands of the inexperienced. 
+Then I picked through an implementation of a multi-faceted search written by an Angular newbie and begrudgingly noted that bad code can happen anywhere. It seems that in actuality, tools that require more upfront knowledge do more harm than good in the hands of the inexperienced.
 
 On the face of it the code was somewhat more structured than any given piece of jQuery you may come across. It used some of the proven abstractions like controllers and models. It even had a service! Unfortunately it used most of the abstractions poorly. The controller was many hundreds of lines long and did everything on the page. The models did more than hold state and data. In essence, the tools the framework provided were missused because the developer didn’t know what they were for.
 
@@ -106,7 +106,7 @@ We just added a feature to our lightbox directive without modifying any code in 
 
 ## DOM manipulation sucks and you know it does
 
-Have you ever looked at the source of a jQuery slider, accordion, or lightbox and seen hundreds of lines of code that are there just to manipulate how the DOM is displaying a particular state? 
+Have you ever looked at the source of a jQuery slider, accordion, or lightbox and seen hundreds of lines of code that are there just to manipulate how the DOM is displaying a particular state?
 
 I have - usually to fix some obscure bug that only happens after a particular sequence of things. Only moments after reading the bug report you’ve broken a sweat because you just know this bug is going to be in DOM manipulation soup. You’re going to wade through a few lines of state and many lines of addClass() and appendTo() until you reside on the floor, weeping, waiting for the misery to end.
 
@@ -119,7 +119,7 @@ Is it any wonder why when you look at how most jQuery is written? See, when you 
 
 Compare that with Angular, where you end up:
 
-1. Extending HMTL with data attributes to bind events.
+1. Extending HTML with data attributes to bind events.
 2. Crafting a template that will display data.
 3. Writing javascript to modify state of modular components.
 
