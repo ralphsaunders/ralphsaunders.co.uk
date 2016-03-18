@@ -45,3 +45,4 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # Ralph's Settings
 THEME = 'themes/ralphsaunders.co.uk'
+THEME_STATIC_PATHS = ['dist']
