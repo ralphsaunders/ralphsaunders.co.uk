@@ -8,3 +8,6 @@ src/*
 output/*
 node_modules/*
 venv/*
+themes/ralphsaunders.co.uk/dist/*
+themes/ralphsaunders.co.uk/node_modules/*
+
