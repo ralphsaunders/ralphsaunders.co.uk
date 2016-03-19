@@ -184,6 +184,8 @@ sub {
 
 img {
   border: 0;
+  vertical-align: bottom;
+  max-width: 100%;
 }
 
 /**
@@ -422,3 +424,9 @@ td,
 th {
   padding: 0;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+

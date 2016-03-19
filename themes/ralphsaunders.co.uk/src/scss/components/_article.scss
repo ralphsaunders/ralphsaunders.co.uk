@@ -1,0 +1,68 @@
+/*******************************************************************************
+ * Article CSS
+ ******************************************************************************/
+.article {
+    overflow: hidden;
+
+    > p,
+    > img,
+    > figure,
+    > ul,
+    > ol,
+    > menu,
+    > nav,
+    > span,
+    > aside,
+    > .highlighttable,
+    > section {
+        width: 30%;
+        margin-right: 3.3%;
+        float: right;
+        clear: both;
+    }
+
+    > .highlighttable {
+        width: 75%;
+        background: lime;
+    }
+
+    .full-width {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.header-area {
+    position: relative;
+    background: red;
+    height: 95vh;
+    overflow: hidden;
+
+    img {
+        opacity: 0.85;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: none;
+    }
+
+    h1 {
+        position: absolute;
+        width: 30vw;
+        top: 10vw;
+        left: 10vw;
+        z-index: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -1rem;
+            left: 1rem;
+            z-index: -1;
+            background: lime;
+        }
+    }
+}

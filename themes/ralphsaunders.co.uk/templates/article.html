@@ -1,6 +1,7 @@
 {% extends 'master.html' %}
 
 {% block ascii %}
+<!--
 ................................................
 ................................................
 ................................................
@@ -47,20 +48,22 @@
 ................................................
 ................................................
 ................................................
+-->
 {% endblock %}
 
 {% block title %}{{article.title}}{% endblock %}
 
 {% block body %}
-<article class="article cf">
+<article class="article">
 
-    <header>
+    <header class="header-area">
+        {% if article.featured_image %}
+            <img src="{{article.featured_image}}" alt="" >
+        {% endif %}
+
         <h1 class="title">{{article.title}}</h1>
-
-        <div class="summary">
-            {{article.summary}}
-        </div>
     </header>
 
     {{article.content}}
+
 {% endblock %}
