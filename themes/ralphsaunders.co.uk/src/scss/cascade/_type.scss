@@ -1,0 +1,55 @@
+$normal-stack: "ars-maquette-web", Helvetica, Arial, Sans-serif;
+$mono-stack: Monaco, monospace;
+
+body {
+  font: 1rem/1.4 $normal-stack;
+  color: $black;
+  background: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: lowercase;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+}
+
+a {
+  font-weight: 500;
+  color: $cta;
+  display: inline-block;
+  padding: 0.125rem 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p,
+ul,
+ol {
+  margin: 1.3rem 0;
+}
+
+pre {
+  font-family: $mono-stack;
+}

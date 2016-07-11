@@ -1,0 +1,34 @@
+pre {
+  background: lighten($cta, 80%);
+  padding: 1rem;
+  border-radius: 0 5px 5px 0;
+  color: #696969;
+  font-size: 0.75rem;
+  line-height: 1.4;
+
+  .kd,
+  .p,
+  .s1,
+  .mi,
+  .nt {
+    color: $cta;
+  }
+
+  .nx,
+  .o,
+  .s {
+    color: #a7a7a7;
+  }
+
+  .k,
+  .nb,
+  .na {
+    color: #03a9f4
+  }
+}
+
+.linenodiv pre {
+  color: #fff;
+  background: $cta;
+  border-radius: 5px 0 0 5px;
+}

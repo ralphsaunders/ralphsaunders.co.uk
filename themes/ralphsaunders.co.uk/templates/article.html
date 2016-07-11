@@ -54,16 +54,16 @@
 {% block title %}{{article.title}}{% endblock %}
 
 {% block body %}
-<article class="article">
+<article class="article wrapper">
 
     <header class="header-area">
         {% if article.featured_image %}
             <img src="{{article.featured_image}}" alt="" >
         {% endif %}
-
         <h1 class="title">{{article.title}}</h1>
     </header>
 
     {{article.content}}
 
+</article>
 {% endblock %}
