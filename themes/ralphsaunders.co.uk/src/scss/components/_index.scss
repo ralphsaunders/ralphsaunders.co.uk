@@ -1,12 +1,29 @@
 .sitename {
-  margin-top: 0;
+  overflow: hidden;
+}
+
+.sitename-container {
+  margin: 0 auto;
+  padding: 0 0 0 4rem;
 }
 
 .article-list {
   padding: 0;
+  margin: 0;
   list-style: none;
+
+  a {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
   li {
     margin-bottom: 0.25rem;
   }
+}
+
+.index-section {
+  margin: 0 auto;
+  padding: 0 4rem;
+  font-size: 0.75rem;
 }

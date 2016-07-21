@@ -54,16 +54,18 @@
 {% block title %}{{article.title}}{% endblock %}
 
 {% block body %}
-<article class="article wrapper">
+<article class="article flex-grid container">
 
-    <header class="header-area">
+    <header class="header-area one-whole">
         {% if article.featured_image %}
             <img src="{{article.featured_image}}" alt="" >
         {% endif %}
         <h1 class="title">{{article.title}}</h1>
     </header>
 
-    {{article.content}}
+    <div class="one-half">
+        {{article.content}}
+    </div>
 
 </article>
 {% endblock %}

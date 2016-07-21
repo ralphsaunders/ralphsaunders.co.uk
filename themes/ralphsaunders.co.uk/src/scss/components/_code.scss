@@ -1,5 +1,10 @@
+/*******************************************************************************
+ * Preformatted areas.
+ *
+ * Usually display code snippets
+ ******************************************************************************/
 pre {
-  background: lighten($cta, 80%);
+  background: #22282D;
   padding: 1rem;
   border-radius: 0 5px 5px 0;
   color: #696969;
@@ -23,12 +28,21 @@ pre {
   .k,
   .nb,
   .na {
-    color: #03a9f4
+    color: #31ECFF;
   }
 }
 
 .linenodiv pre {
-  color: #fff;
-  background: $cta;
+  color: #a7a7a7;
+  background: #1D2123;
   border-radius: 5px 0 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .highlighttable {
+    width: 100%;
+    display: block;
+    overflow-x: scroll;
+    border-radius: 5px;
+  }
 }

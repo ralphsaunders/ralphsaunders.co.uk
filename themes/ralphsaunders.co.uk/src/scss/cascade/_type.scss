@@ -1,12 +1,42 @@
+/*******************************************************************************
+ * Font stacks
+ ******************************************************************************/
 $normal-stack: "ars-maquette-web", Helvetica, Arial, Sans-serif;
 $mono-stack: Monaco, monospace;
 
+/*******************************************************************************
+ * Default font sizing
+ *
+ * Scales on viewport width. Is bumped up with media queries when type gets too
+ * small on smaller viewports.
+ ******************************************************************************/
+html {
+  font: 1.5vw/1.4 $normal-stack;
+}
+
+@media screen and (max-width: 810px) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+/*******************************************************************************
+ * Default colours
+ ******************************************************************************/
 body {
-  font: 1rem/1.4 $normal-stack;
   color: $black;
   background: $bg;
 }
 
+/*******************************************************************************
+ * Heading Styles
+ ******************************************************************************/
 h1,
 h2,
 h3,
@@ -18,8 +48,8 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
-  letter-spacing: -1px;
+  font-size: 12vw;
+  letter-spacing: -0.6vw;
 }
 
 h2 {
@@ -33,6 +63,9 @@ h6 {
   font-weight: 100;
 }
 
+/*******************************************************************************
+ * Link styles
+ ******************************************************************************/
 a {
   font-weight: 500;
   color: $cta;
@@ -44,10 +77,19 @@ a {
   }
 }
 
+/*******************************************************************************
+ * Content styles
+ ******************************************************************************/
 p,
 ul,
 ol {
   margin: 1.3rem 0;
+  padding: 0;
+  list-style-position: outside;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 pre {
