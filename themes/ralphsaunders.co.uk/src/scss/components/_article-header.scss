@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Article Header
+ ******************************************************************************/
+.header-title {
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  overflow: hidden;
+  color: rgba($black, 0);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: lime;
+    z-index: -1;
+    transform: translateX(-100%);
+  }
+
+  &.activate {
+    animation: forwards bodyColorIn 0.5s 0.5s $fast-bezier;
+
+    &:after {
+      animation: forwards appearFromLeft 0.5s $fast-bezier;
+    }
+  }
+}
