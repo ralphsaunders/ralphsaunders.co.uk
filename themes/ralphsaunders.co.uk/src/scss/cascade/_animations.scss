@@ -1,0 +1,21 @@
+$fast-bezier: cubic-bezier(0, 0.6, 0.7, 1);
+
+@keyframes appearFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bodyColorIn {
+  0% {
+    color: rgba($black, 0);
+  }
+
+  100% {
+    color: rgba($black, 1);
+  }
+}
