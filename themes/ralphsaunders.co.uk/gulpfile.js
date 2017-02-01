@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     args = require('yargs').argv,
     debug = require('gulp-debug'),
     autoprefixer = require('gulp-autoprefixer'),
+    gulpif = require('gulp-if'),
     changed = require('gulp-changed'),
     paths = {
         scss: {
@@ -25,15 +26,18 @@ var gulp = require('gulp'),
 
 gulp.task('scss', function() {
     return gulp.src(paths.scss.src)
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(gulpif(!args.production, sourcemaps.init()))
+        .pipe(gulpif(args.production, sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError)))
+        .pipe(gulpif(!args.production, sass().on('error', sass.logError)))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             flexbox: 'no-2009',
             cascade: false
         }))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.scss.dist))
+        .pipe(gulpif(!args.production, sourcemaps.write()))
+        .pipe(gulp.dest(paths.scss.dist));
 });
 
 gulp.task('js', function() {

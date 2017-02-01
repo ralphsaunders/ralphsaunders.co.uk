@@ -17,7 +17,6 @@
         {% endif %}
 
         <title>{{SITENAME}}</title>
-        {% include '_includes/feeds.html' %}
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="{{SITEURL}}/{{THEME_STATIC_DIR}}/css/main.css" />
@@ -36,27 +35,6 @@
 
     </head>
     <body>
-        <div class="sitename-container">
-            <h1 class="sitename">ralphsaunders.co.uk</h1>
-        </div>
-
-        <section class="index-section flex-grid">
-            <ol class="article-list one-third">
-                {% for article in articles_page.object_list %}
-                    <li class="article-list-item">
-                        <a href="{{article.url}}">{{article.title}}</a>
-                        {% if article.blurb %}
-                            <p>{{article.blurb}}</p>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ol>
-
-            <div class="grid-fill">
-                <p>abcs</p>
-            </div>
-        </section>
-
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

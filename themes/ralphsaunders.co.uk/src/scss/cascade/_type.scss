@@ -10,20 +10,8 @@ $mono-stack: Monaco, monospace;
  * Scales on viewport width. Is bumped up with media queries when type gets too
  * small on smaller viewports.
  ******************************************************************************/
-html {
-  font: 1.5vw/1.4 $normal-stack;
-}
-
-@media screen and (max-width: 810px) {
-  html {
-    font-size: 2vw;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  html {
-    font-size: 1rem;
-  }
+body {
+  font: 1rem/1.4 $normal-stack;
 }
 
 /*******************************************************************************

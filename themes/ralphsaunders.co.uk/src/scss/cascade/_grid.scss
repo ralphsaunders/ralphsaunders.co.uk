@@ -1,33 +1,13 @@
 /*******************************************************************************
- * Wrapper
- *
- * Used for wrapping content in appropriate margins, but not aligning to center
- ******************************************************************************/
-.wrapper {
-  margin: 4rem 4rem 0 4rem;
-}
-
-@media screen and (max-width: 620px) {
-  .wrapper {
-    margin: 2rem 2rem 0 2rem;
-  }
-}
-
-/*******************************************************************************
  * Container
  *
  * Used for wrapping content in margins and aligning center
  ******************************************************************************/
-.container {
+.contain {
   width: 100%;
+  max-width: 82rem; // 1280px
   margin: 0 auto;
-  padding: 0 4rem;
-}
-
-@media screen and (max-width: 620px) {
-  .container {
-    padding: 0 2rem;
-  }
+  padding: 0 1rem;
 }
 
 /*******************************************************************************
@@ -39,10 +19,10 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -1rem;
+  margin-left: -2rem;
 
   > * {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 }
 
