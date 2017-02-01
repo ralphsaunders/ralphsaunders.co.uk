@@ -9,13 +9,18 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     gulpif = require('gulp-if'),
     changed = require('gulp-changed'),
+    webpack = require('webpack-stream'),
+    named = require('vinyl-named'),
+    commonChunksPlugin = require("webpack/lib/optimize/CommonsChunkPlugin"),
     paths = {
         scss: {
             src: 'src/scss/**/*.scss',
             dist: 'dist/css'
         },
         js: {
-            src: 'src/js/**/*.js',
+            entries: [
+                'src/js/article/article-index.js'
+            ],
             dist: 'dist/js'
         },
         images: {
@@ -41,10 +46,23 @@ gulp.task('scss', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src(paths.js.src)
-        .pipe(changed(paths.js.dist))
-        .pipe(debug({title: 'js'}))
-        .pipe(gulp.dest(paths.js.dist))
+    return gulp.src(paths.js.entries)
+        .pipe(named())
+        .pipe(webpack({
+            watch: true,
+            module: {
+                loaders: [
+                    {
+                        test: /\.js$/,
+                        loader: 'babel-loader?presets[]=es2015'
+                    }
+                ]
+            },
+            plugins: [
+                new commonChunksPlugin('commons.chunk.js')
+            ]
+        }))
+        .pipe(gulp.dest(paths.js.dist));
 });
 
 gulp.task('images', function() {
