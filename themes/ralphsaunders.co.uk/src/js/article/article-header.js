@@ -14,5 +14,5 @@ var waypoint = new Waypoint({
 
         waypoint.destroy();
     },
-    offset: '35%'
+    offset: '100%'
 });

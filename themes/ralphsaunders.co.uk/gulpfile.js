@@ -73,8 +73,7 @@ gulp.task('images', function() {
         .pipe(gulp.dest(paths.images.dist))
 });
 
-gulp.task('default', ['scss', 'js', 'images'], function() {
+gulp.task('default', ['scss', 'images'], function() {
     gulp.watch(paths.scss.src, ['scss']);
-    gulp.watch(paths.js.src, ['js']);
     gulp.watch(paths.images.src, ['images']);
 });

@@ -7,7 +7,7 @@
         {{article.content}}
     {% else %}
         <article class="article">
-            <header class="header-area contain">
+            <header class="header-area">
                 {% if article.featured_image %}
                     <img class="header-image" src="{{article.featured_image}}" alt="" >
                 {% endif %}
@@ -17,8 +17,10 @@
                 </div>
             </header>
 
-            <section class="body contain-small" role="main">
-                {{article.content}}
+            <section class="article-body" role="main">
+                <div class="contain-small">
+                    {{article.content}}
+                </div>
             </section>
         </article>
     {% endif %}
