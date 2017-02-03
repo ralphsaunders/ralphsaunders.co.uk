@@ -1,0 +1,25 @@
+/*******************************************************************************
+ * Article Body
+ ******************************************************************************/
+.article-body .contain-small {
+  img {
+    max-width: none;
+    width: 100%;
+    height: auto;
+  }
+
+  > {
+    p,
+    ul,
+    ol,
+    pre,
+    code {
+      margin-left: 28%;
+    }
+
+    p:first-of-type {
+      font-size: 1.875rem;
+      font-weight: 500;
+    }
+  }
+}

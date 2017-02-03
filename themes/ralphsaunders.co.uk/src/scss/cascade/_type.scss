@@ -1,7 +1,8 @@
 /*******************************************************************************
  * Font stacks
  ******************************************************************************/
-$normal-stack: "ars-maquette-web", Helvetica, Arial, Sans-serif;
+$title-stack: "ars-maquette-web", Helvetica, Arial, Sans-serif;
+$body-stack: "yrsa", Georgia, serif;
 $mono-stack: Monaco, monospace;
 
 /*******************************************************************************
@@ -11,7 +12,7 @@ $mono-stack: Monaco, monospace;
  * small on smaller viewports.
  ******************************************************************************/
 body {
-  font: 1.25rem/1.6 $normal-stack;
+  font: 100 1.5rem/1.6 $body-stack;
 }
 
 /*******************************************************************************
@@ -33,11 +34,22 @@ h5,
 h6 {
   text-transform: lowercase;
   line-height: 1;
+  font-family: $title-stack;
+  color: $neon-mint;
 }
 
 h1 {
-  font-size: 11.5vw;
-  letter-spacing: -0.6vw;
+  font-size: 7.8vw;
+  letter-spacing: -0.3vw;
+  margin: 2.5vw 0;
+}
+
+@media screen and (min-width: 1280px){
+  h1 {
+    font-size: 6.25rem;
+    letter-spacing: -0.23rem;
+    margin: 1.875rem 0;
+  }
 }
 
 h2 {
@@ -63,7 +75,7 @@ h6 {
  ******************************************************************************/
 a {
   font-weight: 500;
-  color: $cta;
+  color: $bumble-yellow;
   display: inline-block;
   padding: 0.125rem 0;
 
@@ -87,6 +99,100 @@ ol {
   }
 }
 
-pre {
+ul {
+  list-style: none;
+
+  li {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1.5rem;
+      top: 50%;
+      transform: translateY(-30%);
+      width: 0.6rem;
+      height: 0.6rem;
+      background: $neon-mint;
+      border-radius: 50%;
+    }
+
+    &:nth-child(3n):before {
+      background: $bumble-yellow;
+    }
+
+    &:nth-child(2n):before {
+      background: $dirty-mint;
+    }
+  }
+}
+
+pre,
+code {
   font-family: $mono-stack;
+  font-size: 1rem;
+  margin: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+blockquote {
+  color: $neon-mint;
+  font-size: 7.8vw;
+  letter-spacing: -0.3vw;
+  margin: 2.5vw 0;
+  font-family: $title-stack;
+  line-height: 1;
+}
+
+@media screen and (min-width: 1280px){
+  blockquote {
+    font-size: 6.25rem;
+    letter-spacing: -0.23rem;
+    margin: 1.875rem 0;
+  }
+}
+
+/*******************************************************************************
+ * Table Typography styles
+ ******************************************************************************/
+.highlighttable {
+  width: 100%;
+  background: $gray-blue;
+
+  .code,
+  .linenos {
+    padding: 1rem 0;
+  }
+
+  .code {
+    padding-right: 1rem;
+  }
+
+  .linenos {
+    padding-left: 1rem;
+    color: $dirty-mint;
+  }
+
+  .kd,
+  .nt {
+    color: $teal;
+  }
+
+  .p,
+  .na {
+    color: $bumble-yellow;
+  }
+
+  .nx,
+  .o,
+  .k,
+  .mi,
+  .s1,
+  .s,
+  .nb {
+    color: $dirty-mint;
+  }
 }
