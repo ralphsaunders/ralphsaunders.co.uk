@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     webpack = require('webpack-stream'),
     named = require('vinyl-named'),
+    bowerWebpackPlugin = require('bower-webpack-plugin'),
     commonChunksPlugin = require("webpack/lib/optimize/CommonsChunkPlugin"),
     paths = {
         scss: {
@@ -19,7 +20,7 @@ var gulp = require('gulp'),
         },
         js: {
             entries: [
-                'src/js/article/article-index.js'
+                'src/js/index.js'
             ],
             dist: 'dist/js'
         },
@@ -59,7 +60,8 @@ gulp.task('js', function() {
                 ]
             },
             plugins: [
-                new commonChunksPlugin('commons.chunk.js')
+                new commonChunksPlugin('commons.chunk.js'),
+                new bowerWebpackPlugin()
             ]
         }))
         .pipe(gulp.dest(paths.js.dist));

@@ -1,0 +1,21 @@
+{
+  "name": "ralphsaunders.co.uk",
+  "description": "ralphsaunders.co.uk theme",
+  "main": "gulpfile.js",
+  "authors": [
+    "Ralph Saunders"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/ralphsaunders/ralphsaunders.co.uk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "crowd-licensed-gsap": "git@bitbucket.org:thisiscrowd/crowd-licensed-gsap.git#^1.19.1"
+  }
+}
