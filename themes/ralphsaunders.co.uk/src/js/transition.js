@@ -8,7 +8,7 @@ import TweenLite from '../../bower_components/crowd-licensed-gsap/src/uncompress
         HideShowTransition;
 
     function play(container, callback) {
-        TweenMax.to(container, 1, {
+        TweenMax.to(container, 0.25, {
             opacity: 0,
             onComplete: function() {
                 callback();
@@ -43,7 +43,7 @@ import TweenLite from '../../bower_components/crowd-licensed-gsap/src/uncompress
             });
 
             var _this = this;
-            TweenMax.to(_this.newContainer, 1, {
+            TweenMax.to(_this.newContainer, 0.25, {
                 opacity: 1,
                 onComplete: function() {
                 }
