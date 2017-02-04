@@ -59,6 +59,13 @@ gulp.task('js', function() {
                     }
                 ]
             },
+            resolve: {
+                modulesDirectories: ['bower_components', 'node_modules'],
+                alias: {
+                    "TweenLite": "crowd-licensed-gsap/src/uncompressed/TweenLite.js",
+                    "CSSPlugin": "crowd-licensed-gsap/src/uncompressed/plugins/CSSPlugin.js",
+                }
+            },
             plugins: [
                 new commonChunksPlugin('commons.chunk.js'),
                 new bowerWebpackPlugin()

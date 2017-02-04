@@ -1,5 +1,6 @@
 import Barba from 'barba.js';
-import TweenLite from '../../bower_components/crowd-licensed-gsap/src/uncompressed/TweenMax.js';
+import TweenLite from 'crowd-licensed-gsap/src/uncompressed/TweenLite.js';
+import CSSPlugin from 'crowd-licensed-gsap/src/uncompressed/plugins/CSSPlugin.js';
 
 (function() {
     'use strict';
@@ -8,7 +9,7 @@ import TweenLite from '../../bower_components/crowd-licensed-gsap/src/uncompress
         HideShowTransition;
 
     function play(container, callback) {
-        TweenMax.to(container, 0.25, {
+        TweenLite.to(container, 0.25, {
             opacity: 0,
             onComplete: function() {
                 callback();
@@ -37,13 +38,13 @@ import TweenLite from '../../bower_components/crowd-licensed-gsap/src/uncompress
             document.body.scrollTop = 0;
 
             this.done();
-            TweenMax.set(this.newContainer, {
+            TweenLite.set(this.newContainer, {
                 visibility: 'visible',
                 opacity: 0
             });
 
             var _this = this;
-            TweenMax.to(_this.newContainer, 0.25, {
+            TweenLite.to(_this.newContainer, 0.25, {
                 opacity: 1,
                 onComplete: function() {
                 }
