@@ -6,10 +6,15 @@
     {% if article.bespoke %}
         {{article.content}}
     {% else %}
+
+        <section class="articles-section article-page contain-small">
+            <h2>Articles <a href="{{SITEURL}}">Home</a></h2>
+        </section>
+
         <article class="article">
-            <header class="header-area contain">
+            <header class="header-area">
                 {% if article.featured_image %}
-                    <div class="header-image-container">
+                    <div class="header-image-container contain">
                         <img class="header-image" src="{{article.featured_image}}" alt="" >
                     </div>
                 {% endif %}

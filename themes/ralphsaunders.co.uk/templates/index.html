@@ -59,7 +59,7 @@
                     <ol class="image-listing">
                         {% for article in articles_page.object_list if article.bespoke %}
                         <li>
-                            <a href="{{article.url}}" title="{{article.title}}">
+                            <a href="{{article.url}}" title="{{article.title}}" target="_blank">
                                 <img src="{{article.square_image}}" alt="">
                             </a>
                         </li>

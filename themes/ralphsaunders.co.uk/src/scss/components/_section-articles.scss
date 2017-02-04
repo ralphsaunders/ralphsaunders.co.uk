@@ -3,9 +3,15 @@
  ******************************************************************************/
 .articles-section {
   margin: 3rem auto;
+  overflow: hidden;
 
   ol {
     list-style: none;
+    transition: opacity 0.1s linear;
+
+    .play-out & {
+      opacity: 0;
+    }
   }
 
   a {
@@ -24,5 +30,21 @@
     font-size: 1rem;
     padding-right: 0.4rem;
     color: $mid-gray;
+  }
+
+  > h2 > a {
+    opacity: 0;
+    animation: fadeInUp 0.5s cubic-bezier(0, 0.5, 0.6, 1) 0.35s forwards;
+    padding: 0;
+  }
+
+  &.article-page {
+    h2 {
+      animation: moveLeftVw 0.5s cubic-bezier(0, 0.5, 0.6, 1) 0.85s forwards;
+
+      @media screen and (min-width: 1280px) {
+        animation: moveLeftRem 0.5s cubic-bezier(0, 0.5, 0.6, 1) 0.85s forwards;
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import Barba from 'barba.js';
 import TweenLite from 'crowd-licensed-gsap/src/uncompressed/TweenLite.js';
 import CSSPlugin from 'crowd-licensed-gsap/src/uncompressed/plugins/CSSPlugin.js';
+import ScrollToPlugin from 'crowd-licensed-gsap/src/uncompressed/plugins/ScrollToPlugin.js';
 
 (function() {
     'use strict';
@@ -8,12 +9,13 @@ import CSSPlugin from 'crowd-licensed-gsap/src/uncompressed/plugins/CSSPlugin.js
     var view,
         HideShowTransition;
 
-    function play(container, callback) {
-        TweenLite.to(container, 0.25, {
-            opacity: 0,
-            onComplete: function() {
+    function play(callback) {
+        requestAnimationFrame(function() {
+            document.body.classList.add('play-out');
+
+            setTimeout(function() {
                 callback();
-            }
+            }, 100);
         });
     }
 
@@ -30,24 +32,24 @@ import CSSPlugin from 'crowd-licensed-gsap/src/uncompressed/plugins/CSSPlugin.js
             var _this = this;
             return new Promise(
                 function(resolve) {
-                    play(_this.oldContainer, resolve);
+                    play(resolve);
                 }
             );
         },
         finish: function() {
             document.body.scrollTop = 0;
-
             this.done();
             TweenLite.set(this.newContainer, {
                 visibility: 'visible',
-                opacity: 0
             });
 
-            var _this = this;
-            TweenLite.to(_this.newContainer, 0.25, {
-                opacity: 1,
-                onComplete: function() {
-                }
+            requestAnimationFrame(function() {
+                document.body.classList.remove('play-out');
+                document.body.classList.add('play-in');
+
+                setTimeout(function() {
+                    document.body.classList.remove('play-in');
+                }, 100);
             });
         }
     });

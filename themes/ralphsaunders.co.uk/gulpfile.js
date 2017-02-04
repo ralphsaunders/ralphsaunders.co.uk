@@ -20,7 +20,8 @@ var gulp = require('gulp'),
         },
         js: {
             entries: [
-                'src/js/index.js'
+                'src/js/index.js',
+                'src/js/article-index.js',
             ],
             dist: 'dist/js'
         },
@@ -64,6 +65,7 @@ gulp.task('js', function() {
                 alias: {
                     "TweenLite": "crowd-licensed-gsap/src/uncompressed/TweenLite.js",
                     "CSSPlugin": "crowd-licensed-gsap/src/uncompressed/plugins/CSSPlugin.js",
+                    "ScrollToPlugin": "crowd-licensed-gsap/src/uncompressed/plugins/ScrollToPlugin.js",
                 }
             },
             plugins: [

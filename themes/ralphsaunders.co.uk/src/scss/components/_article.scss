@@ -1,0 +1,15 @@
+/*******************************************************************************
+ * Article
+ ******************************************************************************/
+body {
+  transition: background 0.1s cubic-bezier(0, 0.5, 0.6, 1);
+  background: #fff;
+}
+
+body.play-out {
+  //background: rgba(lime, 0.2);
+}
+
+body.play-in {
+  //background: rgba(magenta, 0.2);
+}

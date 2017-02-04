@@ -3,4 +3,9 @@
  ******************************************************************************/
 .made-with-stuff {
   margin: 3rem auto;
+  transition: opacity 0.1s linear;
+
+  .play-out & {
+    opacity: 0;
+  }
 }

@@ -1,6 +1,11 @@
 /*******************************************************************************
  * Article Body
  ******************************************************************************/
+.article-body {
+  opacity: 0;
+  animation: fadeIn 0.4s cubic-bezier(0, 0.5, 0.6, 1) 0.8s forwards;
+}
+
 .article-body .contain-small {
   img {
     max-width: none;
@@ -23,8 +28,18 @@
       font-weight: 500;
       line-height: 1.4;
 
+      pre,
+      code {
+        font-size: 1.3rem;
+      }
+
       @media screen and (max-width: 860px) {
         font-size: 1.5rem;
+
+        pre,
+        code {
+          font-size: 1.1rem;
+        }
       }
     }
   }
