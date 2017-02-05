@@ -1,0 +1,12 @@
+.twitter-cta {
+  border-top: 1px solid $neon-mint;
+  margin: 6rem auto 0 auto;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

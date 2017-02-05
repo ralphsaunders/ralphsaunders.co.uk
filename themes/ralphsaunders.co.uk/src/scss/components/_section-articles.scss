@@ -40,10 +40,15 @@
 
   &.article-page {
     h2 {
+      width: 150%;
       animation: moveLeftVw 0.5s cubic-bezier(0, 0.5, 0.6, 1) 0.85s forwards;
 
       @media screen and (min-width: 1280px) {
         animation: moveLeftRem 0.5s cubic-bezier(0, 0.5, 0.6, 1) 0.85s forwards;
+      }
+
+      @media screen and (max-width: 425px) {
+        animation: moveLeftVw2 0.5s cubic-bezier(0, 0.5, 0.6, 1) 0.85s forwards;
       }
     }
   }

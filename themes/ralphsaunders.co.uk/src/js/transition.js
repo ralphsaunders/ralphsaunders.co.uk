@@ -12,6 +12,7 @@ import ScrollToPlugin from 'crowd-licensed-gsap/src/uncompressed/plugins/ScrollT
     function play(callback) {
         requestAnimationFrame(function() {
             document.body.classList.add('play-out');
+            TweenLite.to(window, 0.1, {scrollTo: {y: 0}});
 
             setTimeout(function() {
                 callback();

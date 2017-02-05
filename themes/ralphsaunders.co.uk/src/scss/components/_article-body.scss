@@ -3,7 +3,12 @@
  ******************************************************************************/
 .article-body {
   opacity: 0;
+  transition: opacity 0.1s linear;
   animation: fadeIn 0.4s cubic-bezier(0, 0.5, 0.6, 1) 0.8s forwards;
+
+  .play-out & {
+    opacity: 0;
+  }
 }
 
 .article-body .contain-small {
@@ -11,6 +16,10 @@
     max-width: none;
     width: 100%;
     height: auto;
+  }
+
+  a {
+    display: inline;
   }
 
   > {
@@ -21,6 +30,10 @@
     h4,
     code {
       margin-left: 28%;
+
+      @media screen and (max-width: 425px) {
+        margin-left: 0;
+      }
     }
 
     p:first-of-type {

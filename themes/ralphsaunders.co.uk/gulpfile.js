@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     named = require('vinyl-named'),
     bowerWebpackPlugin = require('bower-webpack-plugin'),
     commonChunksPlugin = require("webpack/lib/optimize/CommonsChunkPlugin"),
+    uglify = require('gulp-uglify'),
     paths = {
         scss: {
             src: 'src/scss/**/*.scss',
@@ -50,6 +51,7 @@ gulp.task('scss', function() {
 gulp.task('js', function() {
     return gulp.src(paths.js.entries)
         .pipe(named())
+        .pipe(gulpif(!args.production, sourcemaps.init()))
         .pipe(webpack({
             watch: true,
             module: {
@@ -69,10 +71,13 @@ gulp.task('js', function() {
                 }
             },
             plugins: [
-                new commonChunksPlugin('commons.chunk.js'),
-                new bowerWebpackPlugin()
+                new commonChunksPlugin('commons.chunk.js', Infinity)
             ]
         }))
+        .pipe(gulpif(args.production, uglify({
+            mangle: false
+        })))
+        .pipe(gulpif(!args.production, sourcemaps.write()))
         .pipe(gulp.dest(paths.js.dist));
 });
 

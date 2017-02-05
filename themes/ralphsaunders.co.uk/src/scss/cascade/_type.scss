@@ -48,15 +48,15 @@ h3 {
   font-size: 7.8vw;
   letter-spacing: -0.3vw;
   margin: 2.5vw 0;
-}
 
-@media screen and (min-width: 1280px){
-  h1,
-  h2,
-  h3 {
+  @media screen and (min-width: 1280px){
     font-size: 6.25rem;
     letter-spacing: -0.23rem;
     margin: 1.875rem 0;
+  }
+
+  @media screen and (max-width: 425px){
+    font-size: 14vw;
   }
 }
 
@@ -111,6 +111,10 @@ ul {
       height: 0.6rem;
       background: $neon-mint;
       border-radius: 50%;
+
+      @media screen and (max-width: 425px) {
+        left: -1.05rem;
+      }
     }
 
     &:nth-child(3n):before {

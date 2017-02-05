@@ -20,6 +20,16 @@ $fast-bezier: cubic-bezier(0, 0.6, 0.7, 1);
   }
 }
 
+@keyframes moveLeftVw2 {
+  0% {
+    transform: translateX(0vw);
+  }
+
+  100% {
+    transform: translateX(-53vw);
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

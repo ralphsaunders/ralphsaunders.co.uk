@@ -1,6 +1,11 @@
 {% extends 'master.html' %}
 
 {% block title %}{{article.title}}{% endblock %}
+{% block og_url %}{{article.url}}{% endblock %}
+{% block og_type %}website{% endblock %}
+{% block og_title %}{{article.title}}{% endblock %}
+{% block og_description %}{{article.summary}}{% endblock %}
+{% block og_image %}{{article.featured_image}}{% endblock %}
 
 {% block body %}
     {% if article.bespoke %}
@@ -29,6 +34,11 @@
                     {{article.content}}
                 </div>
             </section>
+
+            <section class="twitter-cta contain-small">
+                <h2><a href="{{SOCIAL.twitter}}" target="_blank">I'm on twitter</a></h2>
+            </section>
+
         </article>
     {% endif %}
 {% endblock %}
