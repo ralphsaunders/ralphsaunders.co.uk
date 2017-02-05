@@ -93,3 +93,5 @@ gulp.task('default', ['scss', 'images'], function() {
     gulp.watch(paths.scss.src, ['scss']);
     gulp.watch(paths.images.src, ['images']);
 });
+
+gulp.task('build', ['scss', 'images', 'js']);
