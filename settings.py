@@ -28,9 +28,9 @@ STATIC_PATHS = [
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
 
-SOCIAL = (('twitter', 'http://twitter.com/ralphsaunders'),
-          ('dribbble', 'http://dribbble.com/ralphsaunders'),
-          ('github', 'http://github.com/ralphsaunders'),)
+SOCIAL = {'twitter': 'http://twitter.com/ralphsaunders',
+        'dribbble': 'http://dribbble.com/ralphsaunders',
+        'github': 'http://github.com/ralphsaunders'}
 
 
 # custom page generated with a jinja2 template
