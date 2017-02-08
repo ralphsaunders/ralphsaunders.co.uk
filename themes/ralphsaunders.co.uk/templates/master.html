@@ -51,9 +51,9 @@
                 {% block body %}
                 {% endblock %}
 
-                {% include '_includes/hero-footer.html' %}
 
                 {% block footer_scripts %}
+                    {% include '_includes/hero-footer.html' %}
                     <script src="{{SITEURL}}/{{THEME_STATIC_DIR}}/js/commons.chunk.js" async></script>
                 {% endblock %}
             </div>
