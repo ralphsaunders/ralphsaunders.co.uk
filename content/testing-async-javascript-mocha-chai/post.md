@@ -20,7 +20,7 @@ A few years ago I wrote about [managing unit testing workflow using
 Karma](./karma-unit-testing.html), using Jasmine as my go-to framework. I went
 on a bit of a journey and it turns out that [Jasmine does have asynchronous
 support](https://jasmine.github.io/2.5/introduction#section-Asynchronous_Support),
-but the examples below where achieved with [Mocha](https://mochajs.org/) and
+but the examples below were achieved with [Mocha](https://mochajs.org/) and
 [Chai](http://chaijs.com/) (although they basically read pretty much exactly the
 same).
 
