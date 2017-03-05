@@ -5,6 +5,7 @@ Category: FED
 Tags: javascript
 Slug: testing-asynchronous-javascript-with-mocha-chai
 Authors: Ralph Saunders
+Featured_Image: ./images/dist/async-javascript-mocha-chai/opengraph.png
 Summary:
 
 Writing unit tests for asynchronous JavaScript can present issues. Unit testing
